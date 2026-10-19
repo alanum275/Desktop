@@ -1,0 +1,20 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/api/*", "/icons/*", "/*.{js,json,webmanifest,png}"]
+  },
+  "routes": [
+    { "route": "/index.html", "headers": { "cache-control": "no-cache" } },
+    { "route": "/sw.js", "headers": { "cache-control": "no-cache" } }
+  ],
+  "mimeTypes": {
+    ".webmanifest": "application/manifest+json"
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "platform": {
+    "apiRuntime": "node:20"
+  }
+}
